@@ -41,3 +41,42 @@ const revealObserver = new IntersectionObserver(
 revealElements.forEach((element) => {
     revealObserver.observe(element);
 });
+
+const themeToggle = document.querySelector(".theme-toggle");
+const themeIcon = document.querySelector(".theme-icon");
+
+const savedTheme = localStorage.getItem("devsync-theme");
+
+if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+}
+
+function updateThemeIcon() {
+    const currentTheme =
+        document.documentElement.getAttribute("data-theme");
+
+    if (themeIcon) {
+        themeIcon.textContent = currentTheme === "dark" ? "☀" : "☾";
+    }
+}
+
+updateThemeIcon();
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        const currentTheme =
+            document.documentElement.getAttribute("data-theme");
+
+        const nextTheme =
+            currentTheme === "dark" ? "light" : "dark";
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            nextTheme
+        );
+
+        localStorage.setItem("devsync-theme", nextTheme);
+
+        updateThemeIcon();
+    });
+}
