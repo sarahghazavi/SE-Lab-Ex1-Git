@@ -11,9 +11,366 @@
 
 <body>
 
-    <main id="app">
-        <h1>DevSync</h1>
-        <p>A simple workspace for modern development teams.</p>
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="#" class="logo">DevSync</a>
+
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#workflow">Workflow</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <a href="#features"
+            class="nav-button"
+            aria-label="Get started with DevSync">
+                Get Started Free
+            </a>
+            <button class="theme-toggle" aria-label="Toggle color theme" title="Change theme">
+                <span class="theme-icon">☾</span>
+            </button>
+
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Built for modern software teams
+                </div>
+
+                <h1>
+                    Build together.
+                    <span>Ship with confidence.</span>
+                </h1>
+
+                <p>
+                    DevSync brings planning, collaboration, and delivery into one
+                    focused workspace so your team can move from idea to production
+                    without losing momentum.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#features" class="primary-button">
+                        Start Building
+                    </a>
+
+                    <a href="#workflow" class="secondary-button">
+                        See how it works
+                    </a>
+                </div>
+
+                <div class="hero-meta">
+                    <span>✓ No setup required</span>
+                    <span>✓ Built for teams</span>
+                    <span>✓ Simple workflow</span>
+                </div>
+            </div>
+
+            <div class="hero-preview">
+                <div class="preview-window">
+
+                    <div class="preview-topbar">
+                        <div class="preview-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span class="preview-title">DevSync Workspace</span>
+
+                        <div class="preview-status">
+                            Live
+                        </div>
+                    </div>
+
+                    <div class="preview-body">
+
+                        <aside class="preview-sidebar">
+                            <div class="sidebar-brand">DS</div>
+
+                            <div class="sidebar-item active"></div>
+                            <div class="sidebar-item"></div>
+                            <div class="sidebar-item"></div>
+                            <div class="sidebar-item"></div>
+                        </aside>
+
+                        <div class="preview-content">
+
+                            <div class="preview-heading">
+                                <div>
+                                    <span>Current sprint</span>
+                                    <h3>Product Launch</h3>
+                                </div>
+
+                                <div class="preview-members">
+                                    <span>S</span>
+                                    <span>Z</span>
+                                    <span>+3</span>
+                                </div>
+                            </div>
+
+                            <div class="preview-board">
+
+                                <div class="preview-column">
+                                    <span class="column-title">TO DO</span>
+
+                                    <div class="preview-card">
+                                        <span class="card-tag">Design</span>
+                                        <strong>Update landing page</strong>
+                                        <small>Due today</small>
+                                    </div>
+
+                                    <div class="preview-card">
+                                        <span class="card-tag">Product</span>
+                                        <strong>Review new workflow</strong>
+                                        <small>Tomorrow</small>
+                                    </div>
+                                </div>
+
+                                <div class="preview-column">
+                                    <span class="column-title">IN PROGRESS</span>
+
+                                    <div class="preview-card">
+                                        <span class="card-tag">Development</span>
+                                        <strong>Build dashboard</strong>
+                                        <small>2 members</small>
+                                    </div>
+                                </div>
+
+                                <div class="preview-column">
+                                    <span class="column-title">DONE</span>
+
+                                    <div class="preview-card completed">
+                                        <span class="card-tag">Planning</span>
+                                        <strong>Define release goals</strong>
+                                        <small>Completed</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="section-heading">
+                <span>Features</span>
+                <h2>Everything your team needs to move faster.</h2>
+                <p>
+                    Simple tools for planning, collaboration, and delivering
+                    software with less friction.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <h3>Smart Planning</h3>
+                    <p>
+                        Organize tasks and keep your team focused on the work
+                        that matters most.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Team Collaboration</h3>
+                    <p>
+                        Bring developers together in one shared and transparent
+                        workspace.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <h3>Fast Delivery</h3>
+                    <p>
+                        Track progress and move ideas from planning to production
+                        efficiently.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <strong class="counter" data-target="10" data-suffix="K+">0</strong>
+                    <span>Active Developers</span>
+                </div>
+
+                <div class="stat-item">
+                    <strong class="counter" data-target="2.4" data-suffix="K" data-decimals="1">0</strong>
+                    <span>Teams Collaborating</span>
+                </div>
+
+                <div class="stat-item">
+                    <strong class="counter" data-target="98" data-suffix="%">0</strong>
+                    <span>Successful Deliveries</span>
+                </div>
+
+                <div class="stat-item">
+                    <strong class="counter" data-target="24" data-suffix="/7">0</strong>
+                    <span>Team Availability</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="workflow" id="workflow">
+            <div class="section-heading">
+                <span>Workflow</span>
+                <h2>From idea to delivery in three simple steps.</h2>
+                <p>
+                    DevSync keeps your development process organized without
+                    unnecessary complexity.
+                </p>
+            </div>
+
+            <div class="workflow-grid">
+                <article class="workflow-step">
+                    <span class="step-number">01</span>
+                    <h3>Plan</h3>
+                    <p>
+                        Define your goals, organize tasks, and create a clear
+                        development roadmap.
+                    </p>
+                </article>
+
+                <article class="workflow-step">
+                    <span class="step-number">02</span>
+                    <h3>Collaborate</h3>
+                    <p>
+                        Keep everyone aligned while developers work together
+                        across the project.
+                    </p>
+                </article>
+
+                <article class="workflow-step">
+                    <span class="step-number">03</span>
+                    <h3>Deliver</h3>
+                    <p>
+                        Review progress, ship confidently, and continuously
+                        improve your product.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="about-container">
+                <div class="about-content">
+                    <span class="about-label">About DevSync</span>
+
+                    <h2>
+                        One workspace for teams that want to build without the chaos.
+                    </h2>
+
+                    <p>
+                        DevSync is designed to bring planning, collaboration, and
+                        delivery into one clear workflow. Instead of switching between
+                        disconnected tools, teams can stay aligned from the first idea
+                        to the final release.
+                    </p>
+
+                    <p>
+                        Our goal is simple: help software teams spend less time
+                        managing their process and more time creating great products.
+                    </p>
+                </div>
+
+                <div class="about-highlights">
+                    <div class="about-highlight">
+                        <strong>Simple</strong>
+                        <span>Clear workflows without unnecessary complexity.</span>
+                    </div>
+
+                    <div class="about-highlight">
+                        <strong>Collaborative</strong>
+                        <span>A shared space that keeps the whole team aligned.</span>
+                    </div>
+
+                    <div class="about-highlight">
+                        <strong>Focused</strong>
+                        <span>Everything needed to move from planning to delivery.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="section-heading">
+                <span>Testimonials</span>
+                <h2>Trusted by teams that care about shipping well.</h2>
+                <p>
+                    See how modern teams use DevSync to stay aligned,
+                    move faster, and deliver with confidence.
+                </p>
+            </div>
+
+            <div class="testimonial-grid">
+
+                <article class="testimonial-card">
+                    <p class="testimonial-quote">
+                        “DevSync gave our team a much clearer workflow.
+                        Everyone knows what is happening and what needs
+                        to happen next.”
+                    </p>
+
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MC</div>
+
+                        <div>
+                            <strong>Maya Chen</strong>
+                            <span>Product Manager</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <p class="testimonial-quote">
+                        “The simplicity is what makes it useful.
+                        We spend less time managing tools and more
+                        time actually building.”
+                    </p>
+
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DR</div>
+
+                        <div>
+                            <strong>Daniel Reed</strong>
+                            <span>Frontend Engineer</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <p class="testimonial-quote">
+                        “Planning, collaboration, and delivery finally
+                        feel like parts of the same process instead
+                        of separate tasks.”
+                    </p>
+
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">OP</div>
+
+                        <div>
+                            <strong>Olivia Parker</strong>
+                            <span>Engineering Lead</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
 
     <script src="js/script.js"></script>
