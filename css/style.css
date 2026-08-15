@@ -107,6 +107,7 @@ a {
 
 .nav-button {
     padding: 11px 20px;
+
     background: linear-gradient(135deg,
             var(--color-primary),
             var(--color-accent));
