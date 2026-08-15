@@ -101,6 +101,7 @@ body {
     border: 1px solid #ddd;
     color: #222;
 }
+
 .features {
     padding: 90px 8%;
     background: #f7f7f7;
@@ -148,6 +149,69 @@ body {
 }
 
 .feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.stats {
+    padding: 60px 8%;
+}
+
+.stats-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 24px;
+}
+
+.stat-item strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.stat-item span {
+    color: #666;
+    font-size: 14px;
+}
+
+.workflow {
+    padding: 90px 8%;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.workflow-step {
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+}
+
+.step-number {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: #777;
+    font-size: 14px;
+}
+
+.workflow-step h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.workflow-step p {
     color: #666;
     line-height: 1.6;
 }
