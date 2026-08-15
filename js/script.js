@@ -80,3 +80,63 @@ if (themeToggle) {
         updateThemeIcon();
     });
 }
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            const counter = entry.target;
+
+            const target = parseFloat(counter.dataset.target);
+            const suffix = counter.dataset.suffix || "";
+            const decimals = parseInt(
+                counter.dataset.decimals || "0",
+                10
+            );
+
+            const duration = 1400;
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+
+                const progress = Math.min(
+                    elapsed / duration,
+                    1
+                );
+
+                const easedProgress =
+                    1 - Math.pow(1 - progress, 3);
+
+                const currentValue =
+                    target * easedProgress;
+
+                counter.textContent =
+                    currentValue.toFixed(decimals) + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent =
+                        target.toFixed(decimals) + suffix;
+                }
+            }
+
+            requestAnimationFrame(updateCounter);
+
+            observer.unobserve(counter);
+        });
+    },
+    {
+        threshold: 0.4
+    }
+);
+
+counters.forEach((counter) => {
+    counterObserver.observe(counter);
+});
