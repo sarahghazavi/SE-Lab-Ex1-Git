@@ -15,3 +15,29 @@ if (menuToggle && navLinks) {
         });
     });
 }
+
+const revealElements = document.querySelectorAll(
+    ".feature-card, .stat-item, .workflow-step, .about-content, .about-highlight, .testimonial-card"
+);
+
+revealElements.forEach((element) => {
+    element.classList.add("reveal");
+});
+
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("reveal-visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+revealElements.forEach((element) => {
+    revealObserver.observe(element);
+});
